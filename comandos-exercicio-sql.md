@@ -1,4 +1,5 @@
 
+<!-- para criar uma pasta no phpmyadmin -->
 CREATE DATABASE catalago_de_filme CHARACTER SET utf8mb4;
 
 

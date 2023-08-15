@@ -4,6 +4,7 @@
 
 ### Criar banco de dados 
 
+<!-- para criar uma pasta no phpmyadmin -->
 CREATE DATABASE vendas CHARACTER SET utf8mb4; 
 
 ### Criar tabela de fabricantes 
