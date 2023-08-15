@@ -87,4 +87,10 @@ ALTER TABLE fabricantes
     CHANGE nome_do_fabricantes nome VARCHAR(45) NOT NULL;
 ```
 
-###
+### Adicionar coluna 
+
+```sql
+ALTER TABLE produtos
+   --incluiu a palavra quantidade em baixo da  linhas preço 
+   ADD quantidade INT NULL AFTER preco;
+```
