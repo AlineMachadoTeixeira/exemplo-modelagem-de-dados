@@ -2,9 +2,11 @@
 <!-- SQL pelo phpMyadmin -->
 
 etapa 1
+
 ![](etapa_um.PNG)
 
 etapa 2
+
 ![](etapa_dois.PNG)
 
 etapa 3
