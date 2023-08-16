@@ -33,3 +33,37 @@ INSERT INTO fabricantes (nome)
 VALUES('Positivo'), ('Microsoft');
 
 ```
+![](crud_fabricante.PNG)
+
+
+### Produtos
+<!-- vamos inserir na tabela prodturos o que foi pedido no caso nome, preco, descricao, quantidade, fabricante_id-->
+
+```sql
+-- Linha 1
+INSERT INTO produtos (
+         nome, preco, descricao, quantidade, fabricante_id) 
+    VALUE (
+        'Ultrabook',
+        3500,
+        'Equipamento de última geração cheio de recursos, com processador Inter Core i9 do balacobaco',
+        7,
+        2    --id do fabricante Dell    
+        --no fabricante quero associar esse Ultrabook com o fabricante Dell está na segunda posição id2
+    );
+
+-- Linha 2 
+INSERT INTO produtos (
+         nome, descricao, preco,  quantidade, fabricante_id) 
+    VALUE (
+        'Tablet Android',        
+        'Tablet com versão 14 do sistema operacional Android, possui tela de 10 polegadas e armazenamento de 128 GB, e 64 GB de RAM.',
+        1500.99,
+        5,
+        5   --id do fabricante Samsung           
+    );
+
+```
+
+![](crud_fabricantes.PNG)
+
