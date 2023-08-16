@@ -4,6 +4,8 @@ CREATE DATABASE catalago_de_filme CHARACTER SET utf8mb4;
 
 
 
+
+<!-- Criar tabela genero que fizemos no MySQL Workbench com está na foto modelo logico filme -->
 ```sql
 CREATE TABLE generos(
     id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
@@ -11,6 +13,7 @@ CREATE TABLE generos(
 ); 
 ```
 
+<!-- Criar tabela filme que fizemos no MySQL Workbench com está na foto modelo logico filme -->
 ```sql
 CREATE TABLE filmes(
     id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
@@ -25,6 +28,8 @@ CREATE TABLE filmes(
     ALTER TABLE genero RENAME TO generos;
 ```
 
+
+<!-- Criar ligação das tabelas e Criando a chave-estrangeira que fizemos no MySQL Workbench com está na foto modelo logico filme -->
 ```sql
 ALTER TABLE filmes
     
