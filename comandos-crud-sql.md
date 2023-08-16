@@ -63,6 +63,34 @@ INSERT INTO produtos (
         5   --id do fabricante Samsung           
     );
 
+-- Linha 3 , Linha  4 e Linha 5
+INSERT INTO produtos (
+         nome, descricao, preco,  quantidade, fabricante_id) 
+    VALUE (
+        'Geladeira',        
+        'Refrigerador frost-free com acesso à Internet.',
+        5000,
+        12,
+        6   --id do fabricante Brastemp           
+    ), -- Linha 3
+
+    (
+        'iPhone 18 pro Max',
+        'Smartphone Apple cheio de frescuras e caro pra caramba.',
+        12666.66,
+        3,  
+        3
+    ),-- Linha 4
+
+    (
+        'iPad Mini',
+        'Tablet Apple com tela retina display e bla bla bla.',
+        4999.01,
+        5,  
+        3
+    );-- Linha 5
+
+
 ```
 
 ![](crud_fabricantes.PNG)
