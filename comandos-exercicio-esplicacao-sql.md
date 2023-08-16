@@ -1,4 +1,34 @@
 
+<!-- SQL pelo phpMyadmin -->
+
+etapa 1
+![](etapa_um.PNG)
+
+etapa 2
+![](etapa_dois.PNG)
+
+etapa 3
+![](etapa_três.PNG)
+
+etapa 4
+![](etapa_quatro.PNG)
+
+etapa 5
+Para fazer backup.
+- Clique na pasta que quer fazer backup 
+- Vai em exportar  
+- Personalizada - exibir todas as opções possíveis 
+- Escolha Adicionar comando CREATE DATABASE / USE
+- exportar
+![](etapa_cinco.PNG)
+
+
+
+
+
+
+
+<!-- SQL pelo VCStudio -->
 <!-- para criar uma pasta no phpmyadmin -->
 CREATE DATABASE catalago_de_filme CHARACTER SET utf8mb4;
 
