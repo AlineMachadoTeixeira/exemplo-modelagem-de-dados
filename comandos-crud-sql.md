@@ -148,8 +148,10 @@ SELECT  nome, preco, quantidade FROM produtos WHERE preco < 5000 ;
 SELECT  nome, descricao FROM produtos WHERE fabricante_id = 3 ;
 ```
 
-### Usar SELECT com Operadores Lógicos: E(AND), OU(OR), NÂO(!)
+### Usar SELECT com Operadores Lógicos: E(AND), OU(OR), NÂO(NOT)
 
+
+#### E (AND)
 ```sql
 --Ver os produtos que custa entre 2 mil e 6 mil (Usado o operador logico E (AND) ) da tabela 
 SELECT  nome, preco FROM produtos WHERE preco >= 2000 AND preco <= 6000;
@@ -157,10 +159,39 @@ SELECT  nome, preco FROM produtos WHERE preco >= 2000 AND preco <= 6000;
 --A query abaixo não retorna o resgistro. Já que as condicões não foram totalmente atendidas
 SELECT  nome, preco FROM produtos WHERE preco > 5000 AND preco <= 6000;
 
+```
 
 
+#### OU (OR)
+```sql
+SELECT  nome, preco FROM produtos WHERE preco > 5000 OR preco <= 3000;
+```
+
+<!-- Exercício exiba nome e preço somente dos produtos da apple(3) e da Samsung(5) Usamos o OR(Ou), 
+pois não tem como o produto ser fabricado pelo mesmos fabricantes, é um ou outro fabricante -->
+```sql
+SELECT  nome, preco FROM produtos WHERE fabricante_id = 3 OR fabricante_id = 5;
+
+-- Versão usando IN() Dentro -- Mostrar os fabricante apple(3) e da Samsung(5) 
+SELECT  nome, preco FROM produtos WHERE fabricante_id IN(3,5);
+
+-- Versão usando NOT IN() Dentro -- Não Mostrar os fabricante apple(3) e da Samsung(5)
+SELECT  nome, preco FROM produtos WHERE fabricante_id NOT IN(3,5);
+```
+
+
+
+#### NÃO (NOT)
+```sql
+--Mostrar nome, preço e descrição de todos, menos da Microsoft(8)
+SELECT  nome, descricao, preco FROM produtos WHERE NOT fabricante_id = 8;
+
+--Versão usando operador relacional "diferença/diferente != " dar o mesmo resultado de cima
+SELECT  nome, descricao, preco FROM produtos WHERE  fabricante_id != 8;
 
 ```
+
+
 
 
 
