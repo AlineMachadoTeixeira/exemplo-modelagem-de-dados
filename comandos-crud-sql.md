@@ -264,10 +264,62 @@ SELECT nome, descricao FROM produtos WHERE descricao LIKE '%tela%' OR nome LIKE 
 -- da palavra indicada em qualquer posição dentro do texto. Neste contexto, 
 -- %   significa 'qualquer texto' antes da palavra ou depois da palavra. 
 
+```
+
+### Operações e funcões de agregação 
+
+```sql
+
+-- consulta/SOMA todos os preços -- SAM/soma
+ SELECT SUM(preco) FROM produtos; 
+
+ SELECT SUM(preco) as Total FROM produtos; -- alias/apelido
+
+ -- Exemplo de alias/apelido para outras colunas
+ SELECT nome as PRODUTO, preco as "Preço" FROM produtos;
 
 
+
+ --MEDIA/AVG tirar a media
+ SELECT AVG(preco) as "Média dos Preços" FROM produtos; 
+
+-- fazer a media com arredondamento
+ SELECT ROUND(AVG(preco)) as "Média dos Preços" FROM produtos; 
+
+ -- fazer a media com arredondamento e casas decimais 
+ SELECT ROUND( AVG(preco), 2 ) as "Média dos Preços" FROM produtos;
+
+
+-- CONTAGEM 
+SELECT COUNT( id ) as "Qtd de Produtos" FROM produtos; 
+
+--Contar na tabela produtos quantos fabricantes que tem produtos estão na tabela 
+SELECT COUNT( DISTINCT fabricante_id ) as "Qtd de Produtos com Produtos" FROM produtos; 
+-- DISTINCT é uma cláusula/flag  que evita a duplicidade na contagem de registro. Para não pegar os repididos
 
 ```
+
+
+### Operações matemáticas
+
+```sql
+-- (preco * quantidade) vai gerar uma coluna que não existe e fazer a conta
+SELECT nome, preco, quantidade, (preco * quantidade) as Total FROM produtos;
+```
+
+### Segmentação/Agrupamento de resultados 
+```sql
+--modificar o produto para outro fabricante 
+UPDATE produtos SET fabricante_id = 2 WHERE Id = 2;
+
+
+
+SELECT fabricante_id, SUM( preco ) as Total FROM produtos GROUP BY fabricante_id;
+
+```
+
+
+
 
 
 
