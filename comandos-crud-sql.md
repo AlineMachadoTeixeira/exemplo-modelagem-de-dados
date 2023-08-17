@@ -236,6 +236,31 @@ DELETE FROM fabricantes  WHERE id = 4;  -- ☠️ NÃO SE ESQUEÇA DO WHERE!! PE
 
 
 
+## SELECT: outras formas de uso 
+
+### Classificando
+
+```sql
+-- ORDER BY odernar/classificar  Esse tem nome ASC(padrão), mas não recisa escrever vai automatico
+SELECT  nome, preco FROM produtos ORDER BY nome;
+SELECT  nome, preco FROM produtos ORDER BY preco;
+
+-- ORDER BY preço DESC  odernar/classificar decrescente
+SELECT  nome, preco FROM produtos ORDER BY preco DESC;
+
+
+--Ordena só os produtos com quantidade de 20 unidades
+SELECT  nome, preco FROM produtos WHERE quantidade = 20 ORDER BY nome ;
+
+
+
+
+
+
+
+
+```
+
 
 
 
