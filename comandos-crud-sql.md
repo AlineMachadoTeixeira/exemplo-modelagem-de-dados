@@ -192,6 +192,29 @@ SELECT  nome, descricao, preco FROM produtos WHERE  fabricante_id != 8;
 ```
 
 
+## UPDATE
+<!-- UPDATE alterar dados que estão no FROM (tabela) -->
+
+```sql
+--Trocar nome dos fabricantes de Asus(1) para Asus do Brasil
+
+UPDATE fabricantes SET nome = 'Asus do Brasil' WHERE id = 1;  -- ☠️ NÃO SE ESQUEÇA DO WHERE!! PERIGO
+--☠️ NÃO SE ESQUEÇA DO WHERE!! PERIGO ☠️
+
+-- Alterar o preço do iPhone 18 pro Max vamos pegar o id do produto não do fabricante
+UPDATE produtos SET preco = 6549.74 WHERE id = 4; -- ☠️ NÃO SE ESQUEÇA DO WHERE!! PERIGO ☠️
+
+--Alterar DECIMAL do preço para mais casas decimal do registro
+--Como é registro mudamos com ALTER TABLE
+```
+
+```sql
+-- Altere a quantidade dos produtos da Apple(3) e da Samsung(5) para 20 unidades
+UPDATE produtos SET quantidade = 20  WHERE fabricante_id IN (3,5);
+
+```
+
+
 
 
 
