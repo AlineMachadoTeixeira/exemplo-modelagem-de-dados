@@ -215,6 +215,26 @@ UPDATE produtos SET quantidade = 20  WHERE fabricante_id IN (3,5);
 ```
 
 
+## DELETE
+<!-- DELETE deleta dados que estão no FROM (tabela) -->
+<!-- ☠️ NÃO SE ESQUEÇA DO WHERE!! PERIGO senão deleta tudo ☠️ -->
+
+```sql
+--Apagar fabricante  Assus(1)
+DELETE FROM fabricantes  WHERE id = 1;  -- ☠️ NÃO SE ESQUEÇA DO WHERE!! PERIGO! Senão deleta tudo ☠️ 
+
+--Apagar fabricante  LG(4)
+DELETE FROM fabricantes  WHERE id = 4;  -- ☠️ NÃO SE ESQUEÇA DO WHERE!! PERIGO! Senão deleta tudo ☠️
+
+
+
+--Apagar fabricante  Apple(3), vai dar erro, poís tem produtos associado. 
+--  DELETE FROM fabricantes  WHERE id = 3;  -- ☠️ NÃO SE ESQUEÇA DO WHERE!! PERIGO! Senão deleta tudo ☠️
+-- A quary NÃO FUNCIONA devido a restrição de chave estrangeira/relacionamento, ou seja,
+-- existem porduto associados ao fabricante 3 (apple)
+```
+
+
 
 
 
