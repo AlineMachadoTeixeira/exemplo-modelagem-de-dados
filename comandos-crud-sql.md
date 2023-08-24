@@ -33,7 +33,7 @@ INSERT INTO fabricantes (nome)
 VALUES('Positivo'), ('Microsoft');
 
 ```
-![](crud_fabricante.PNG)
+![](img/crud_fabricante.PNG)
 
 
 ### Produtos
@@ -112,7 +112,7 @@ INSERT INTO produtos (
 
 ```
 
-![](crud_fabricantes.PNG)
+![](img/crud_fabricantes.PNG)
 
 
 
