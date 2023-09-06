@@ -18,6 +18,11 @@ INSERT INTO fabricantes (nome) VALUES('Asus');
 ```
 
 ```sql
+-- INSERT -> insere só nome o ID o banco que vai gerar(AI)
+INSERT INTO fabricantes (nome) VALUES('Lenovo');
+```
+
+```sql
 -- INSERT -> vazer com duas linhas
 INSERT INTO fabricantes (nome) VALUES('Dell');
 INSERT INTO fabricantes (nome) VALUES('Apple');
